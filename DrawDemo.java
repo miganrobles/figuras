@@ -113,8 +113,8 @@ public class DrawDemo
     }
 
     /**
-     * Codifica un método en la clase DrawDemo llamado drawPolygon(int n) que permita dibujar un polígono regular con n lados, 
-     * es decir, si n vale 3, será un triángulo, si vale 4 será un cuadrado, etc. 
+     * Dibuja un polígono regular con n lados, 
+     * 
      */
     public void drawPolygon(int n)
     {
@@ -123,6 +123,22 @@ public class DrawDemo
         for (int i=0; i < n; i++) {
             pen.move(100);
             pen.turn(giro);
+        }
+    }
+
+    /**
+     * Dibuja una espiral
+     */
+    public void drawSpiral()
+    {
+        Pen pen = new Pen(200, 200, myCanvas);
+        int move = 100;
+        while (move > 1) {
+            for (int i = 0; i < 2; i++) {
+                pen.move(move);
+                pen.turn(90);
+            }
+            move -= 5;
         }
     }
 }
