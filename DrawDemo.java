@@ -87,25 +87,28 @@ public class DrawDemo
     }
 
     /**
-     * A partir del código de la actividad 0098, codifica un método en la clase DrawDemo llamado drawTriangle 
-     * que permita dibujar un triangulo verde en las coordenadas enteras x e y pasadas como parámetro.
+     * Permite dibujar un triangulo verde en las coordenadas enteras x e y pasadas como parámetro.
      */
     public void drawTriangle(int x, int y) 
     {
         Pen pen = new Pen(x, y, myCanvas);
         pen.setColor(Color.GREEN);
-
-        triangle(pen);
-    }
-
-    /**
-     * Draw a triangle in the pen's color at the pen's location.
-     */
-    private void triangle(Pen pen)
-    {
         for (int i=0; i < 3; i++) {
             pen.move(100);
             pen.turn(120);
+        }
+    }
+    
+    /**
+     * Método que permite dibujar un pentágono verde
+     */
+    public void drawPentagon()
+    {
+        Pen pen = new Pen(200, 200, myCanvas);
+        pen.setColor(Color.GREEN);
+        for (int i=0; i < 5; i++) {
+            pen.move(100);
+            pen.turn(72);
         }
     }
 }
