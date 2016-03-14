@@ -98,7 +98,7 @@ public class DrawDemo
             pen.turn(120);
         }
     }
-    
+
     /**
      * Método que permite dibujar un pentágono verde
      */
@@ -109,6 +109,20 @@ public class DrawDemo
         for (int i=0; i < 5; i++) {
             pen.move(100);
             pen.turn(72);
+        }
+    }
+
+    /**
+     * Codifica un método en la clase DrawDemo llamado drawPolygon(int n) que permita dibujar un polígono regular con n lados, 
+     * es decir, si n vale 3, será un triángulo, si vale 4 será un cuadrado, etc. 
+     */
+    public void drawPolygon(int n)
+    {
+        Pen pen = new Pen(200, 200, myCanvas);
+        int giro = 360 / n;
+        for (int i=0; i < n; i++) {
+            pen.move(100);
+            pen.turn(giro);
         }
     }
 }
